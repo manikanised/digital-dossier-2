@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.animated-header-pattern {
+  background-image: url("../../public/backgrounds/hero-pattern.png"); /* Replace 'your-image-url.jpg' with your image URL */
+  background-size: cover;
+  animation: moveUp 10s linear infinite;
+  /* background-position: bottom; */
+}
+
+@keyframes moveUp {
+  0% {
+    background-position: center bottom; /* Start position */
+  }
+  100% {
+    background-position: center top; /* End position */
+  }
+}

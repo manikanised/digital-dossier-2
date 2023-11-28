@@ -29,15 +29,18 @@ body {
 .animated-header-pattern {
   background-image: url("../../public/backgrounds/hero-pattern.png"); /* Replace 'your-image-url.jpg' with your image URL */
   background-size: cover;
-  animation: moveUp 10s linear infinite;
-  /* background-position: bottom; */
+  animation: moveUp 20s linear infinite;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes moveUp {
   0% {
-    background-position: center bottom; /* Start position */
+    background-position: center top; /* Start position */
   }
   100% {
-    background-position: center top; /* End position */
+    background-position: center bottom; /* End position */
   }
 }

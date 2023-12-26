@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Html4Logo from "../../assets/logos/html-5-logo.svg";
+import Html5Logo from "../../assets/logos/html-5-logo.svg";
 import CssLogo from "../../assets/logos/css-logo.svg";
 import TailwindLogo from "../../assets/logos/tailwind-logo.svg";
 import JsLogo from "../../assets/logos/js-logo.svg";
@@ -15,21 +15,29 @@ export default function SkillsBox() {
         Skills
       </div>
       <div className="flex w-full bg-sky-500 rounded-b-2xl h-1/2">
-        <div className="flex w-full hover:bg-sky-600 rounded-bl-2xl">
-          <Image className="py-2 peer/html" src={Html4Logo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 rounded-bl-2xl justify-center">
+          <Image
+            className="py-2 peer/html w-1/2 h-auto"
+            src={Html5Logo}
+            alt="html5"
+          />
           <Tooltip peerDiffClassName="peer-hover/html:flex" content="HTML5" />
         </div>
-        <div className="flex w-full hover:bg-sky-600">
-          <Image className="py-2 peer/css" src={CssLogo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 justify-center">
+          <Image
+            className="py-2 peer/css w-1/2 h-auto"
+            src={CssLogo}
+            alt="html5"
+          />
           <Tooltip
             peerDiffClassName="peer-hover/css:flex"
             direction="top"
             content="css"
           />
         </div>
-        <div className="flex w-full hover:bg-sky-600">
+        <div className="flex w-full hover:bg-sky-600 justify-center">
           <Image
-            className="py-2 peer/tailwind"
+            className="py-2 peer/tailwind w-1/2 h-auto"
             src={TailwindLogo}
             alt="html5"
           />
@@ -39,32 +47,48 @@ export default function SkillsBox() {
             content="tailwind-css"
           />
         </div>
-        <div className="flex w-full hover:bg-sky-600">
-          <Image className="py-2 peer/js" src={JsLogo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 justify-center">
+          <Image
+            className="py-2 peer/js w-1/2 h-auto"
+            src={JsLogo}
+            alt="html5"
+          />
           <Tooltip
             peerDiffClassName="peer-hover/js:flex"
             direction="top"
             content="JavaScript"
           />
         </div>
-        <div className="flex w-full hover:bg-sky-600">
-          <Image className="py-2 peer/nodejs" src={NodeJsLogo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 justify-center">
+          <Image
+            className="py-2 peer/nodejs w-1/2 h-auto"
+            src={NodeJsLogo}
+            alt="html5"
+          />
           <Tooltip
             peerDiffClassName="peer-hover/nodejs:flex"
             direction="top"
             content="NodeJs"
           />
         </div>
-        <div className="flex w-full hover:bg-sky-600">
-          <Image className="py-2 peer/nextjs" src={NextJsLogo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 justify-center">
+          <Image
+            className="py-2 peer/nextjs w-1/2 h-auto"
+            src={NextJsLogo}
+            alt="html5"
+          />
           <Tooltip
             peerDiffClassName="peer-hover/nextjs:flex"
             direction="top"
             content="NextJs"
           />
         </div>
-        <div className="flex w-full hover:bg-sky-600 rounded-br-2xl">
-          <Image className="py-2 peer/nestjs" src={NestJsLogo} alt="html5" />
+        <div className="flex w-full hover:bg-sky-600 justify-center rounded-br-2xl">
+          <Image
+            className="py-2 peer/nestjs w-1/2 h-auto"
+            src={NestJsLogo}
+            alt="html5"
+          />
           <Tooltip
             peerDiffClassName="peer-hover/nestjs:flex"
             direction="right"

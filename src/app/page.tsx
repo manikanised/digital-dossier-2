@@ -5,12 +5,19 @@ import SkillsBox from "@/components/skills-box/SkillsBox";
 import SloganBox from "@/components/slogan-box/SloganBox";
 import WorkExpBox from "@/components/work-exp-box/WorkExpBox";
 import { Roboto_Mono } from "next/font/google";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"], weight: ["400", "500"] });
 
 export default function Home() {
   const [startNavigation, setStartNavigation] = useState<boolean>(false);
+  useEffect(() => {
+    if (window.innerHeight > window.innerWidth) {
+      alert(
+        "This website is not available on smaller screens yet, please switch to desktop for intended user experience."
+      );
+    }
+  }, []);
   return (
     <main
       className={`flex h-screen w-screen justify-center overflow-hidden bg-indigo-950  ${robotoMono.className}`}

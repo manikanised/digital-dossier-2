@@ -1,10 +1,10 @@
 export default function WorkExpBox() {
   return (
-    <div className="flex w-full flex-col h-80 bg-red-600 mt-12 rounded-t-2xl">
+    <div className="flex w-full flex-col h-80 bg-red-600 rounded-t-2xl">
       <div className="flex w-full h-20 text-white justify-center items-center">
         Work Experience
       </div>
-      <div className="flex w-full bg-red-700 h-full p-4">
+      <div className="flex w-full bg-red-700 h-full p-4 text-white">
         <div className="flex w-full flex-col">
           <div className="flex w-full h-fit justify-between border-b-2 border-white">
             <div className="flex flex-col">

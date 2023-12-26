@@ -3,7 +3,6 @@
 import HeroBox from "@/components/hero-box/HeroBox";
 import SkillsBox from "@/components/skills-box/SkillsBox";
 import SloganBox from "@/components/slogan-box/SloganBox";
-import Tooltip from "@/components/tooltip/Tooltip";
 import WorkExpBox from "@/components/work-exp-box/WorkExpBox";
 import { Roboto_Mono } from "next/font/google";
 import { useState } from "react";
@@ -14,10 +13,10 @@ export default function Home() {
   const [startNavigation, setStartNavigation] = useState<boolean>(false);
   return (
     <main
-      className={`flex h-screen w-screen justify-center bg-indigo-950  ${robotoMono.className}`}
+      className={`flex h-screen w-screen justify-center overflow-hidden bg-indigo-950  ${robotoMono.className}`}
     >
       <div
-        className={`flex flex-col justify-start items-center ${
+        className={`flex flex-col justify-start items-center space-y-8 ${
           startNavigation ? "w-full h-full" : "max-w-[700px] w-1/2"
         }`}
       >

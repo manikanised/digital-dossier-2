@@ -10,7 +10,7 @@ import Tooltip from "../tooltip/Tooltip";
 
 export default function SkillsBox() {
   return (
-    <div className="flex w-full flex-col h-28 bg-sky-400 mt-12 rounded-2xl">
+    <div className="flex w-full flex-col h-28 bg-sky-400 rounded-2xl">
       <div className="flex w-full h-1/2 text-white justify-center items-center">
         Skills
       </div>

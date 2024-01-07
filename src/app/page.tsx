@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/footer/footer";
 import HeroBox from "@/components/hero-box/HeroBox";
 import SkillsBox from "@/components/skills-box/SkillsBox";
 import SloganBox from "@/components/slogan-box/SloganBox";
@@ -11,20 +12,15 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"], weight: ["400", "500"] });
 
 export default function Home() {
   const [startNavigation, setStartNavigation] = useState<boolean>(false);
-  useEffect(() => {
-    if (window.innerHeight > window.innerWidth) {
-      alert(
-        "This website is not available on smaller screens yet, please switch to desktop for intended user experience."
-      );
-    }
-  }, []);
   return (
     <main
-      className={`flex h-screen w-screen justify-center overflow-hidden bg-indigo-950  ${robotoMono.className}`}
+      className={`flex flex-col px-4 md:px-0 min-h-screen h-full w-screen items-center md:overflow-hidden bg-indigo-950 ${
+        !startNavigation && "pt-10"
+      }  ${robotoMono.className}`}
     >
       <div
-        className={`flex flex-col justify-start items-center space-y-8 ${
-          startNavigation ? "w-full h-full" : "max-w-[700px] w-1/2"
+        className={`flex flex-col w-full md:flex-1 justify-start items-center space-y-6 ${
+          startNavigation ? "w-full" : "max-w-[700px] w-1/2"
         }`}
       >
         <HeroBox
@@ -38,6 +34,13 @@ export default function Home() {
             <WorkExpBox />
           </>
         )}
+      </div>
+      <div
+        className={`${
+          startNavigation && "hidden"
+        } flex max-w-[700px] w-full mt-4`}
+      >
+        <Footer />
       </div>
     </main>
   );

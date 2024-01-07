@@ -6,7 +6,7 @@ import SkillsBox from "@/components/skills-box/SkillsBox";
 import SloganBox from "@/components/slogan-box/SloganBox";
 import WorkExpBox from "@/components/work-exp-box/WorkExpBox";
 import { Roboto_Mono } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"], weight: ["400", "500"] });
 

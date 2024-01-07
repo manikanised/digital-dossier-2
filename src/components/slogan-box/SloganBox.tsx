@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import GithubLogo from "../../assets/logos/github-logo.svg";
 import LinkedinLogo from "../../assets/logos/linkedin-logo.svg";
@@ -7,7 +8,7 @@ import Tooltip from "../tooltip/Tooltip";
 export default function SloganBox() {
   return (
     <div className="flex flex-col w-full h-28 bg-fuchsia-400 rounded-2xl">
-      <div className="flex h-3/5 w-full text-center text-white justify-center items-center text-lg">
+      <div className="flex h-3/5 w-full text-center text-white justify-center items-center text-lg px-4">
         I admire web interfaces and like to build them.
       </div>
       <div className="flex w-full h-2/5 bg-fuchsia-600 rounded-b-2xl justify-center space-x-4">

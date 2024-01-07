@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Html5Logo from "../../assets/logos/html-5-logo.svg";
 import CssLogo from "../../assets/logos/css-logo.svg";
@@ -7,8 +8,15 @@ import NodeJsLogo from "../../assets/logos/nodejs-logo.svg";
 import NextJsLogo from "../../assets/logos/nextjs-logo.svg";
 import NestJsLogo from "../../assets/logos/nestjs-logo.svg";
 import Tooltip from "../tooltip/Tooltip";
+import { useEffect, useState } from "react";
 
 export default function SkillsBox() {
+  const [windowWidth, setWindowWidth] = useState<number>(1000);
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
   return (
     <div className="flex w-full flex-col h-28 bg-sky-400 rounded-2xl">
       <div className="flex w-full h-1/2 text-white justify-center items-center">
@@ -21,7 +29,11 @@ export default function SkillsBox() {
             src={Html5Logo}
             alt="html5"
           />
-          <Tooltip peerDiffClassName="peer-hover/html:flex" content="HTML5" />
+          <Tooltip
+            direction={windowWidth <= 700 ? "top" : "left"}
+            peerDiffClassName="peer-hover/html:flex"
+            content="HTML5"
+          />
         </div>
         <div className="flex w-full hover:bg-sky-600 justify-center">
           <Image
@@ -91,7 +103,7 @@ export default function SkillsBox() {
           />
           <Tooltip
             peerDiffClassName="peer-hover/nestjs:flex"
-            direction="right"
+            direction={windowWidth <= 700 ? "top" : "right"}
             content="NestJs"
           />
         </div>
